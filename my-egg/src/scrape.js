@@ -1,17 +1,15 @@
-import React from "react";
+// import React from "react";
 
-const sites = [
-  "https://www.shaws.com/shop/search-results.html?q=egg",
-  "https://stopandshop.com/product-search/egg?searchRef=",
-];
-const list = ["Shaw's", "Stop and Shop"];
+// const sites = [
+//   "https://www.shaws.com/shop/search-results.html?q=egg",
+//   "https://stopandshop.com/product-search/egg?searchRef=",
+// ];
+// const list = ["Shaw's", "Stop and Shop"];
 
-const rp = require("request-promise");
-const cheerio = require("cheerio");
-
-async function getInfo(index) {
+function GetInfo(index) {
   //   let response = await rp(sites[index]);
   //   let $ = cheerio.load(response);
+
   return (
     <div>
       <h3>egg 1</h3>
@@ -21,5 +19,9 @@ async function getInfo(index) {
 }
 
 export default function Info(props) {
-  return <p>hello</p>;
+  return (
+    <div>
+      <GetInfo index={props.index} />
+    </div>
+  );
 }
